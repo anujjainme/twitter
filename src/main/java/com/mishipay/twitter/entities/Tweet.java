@@ -8,7 +8,16 @@ public class Tweet {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(name = "user")
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public String getTweet() {
+        return tweet;
+    }
+
+    @Column(name = "user_id")
     private Long userId;
     private String tweet;
 }

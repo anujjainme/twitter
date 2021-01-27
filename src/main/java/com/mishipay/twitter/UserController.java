@@ -25,6 +25,12 @@ public class UserController {
     @GetMapping("/users/following")
     @ResponseBody
     public List<String> getAllFollowers(@RequestParam long id) {
-        return userService.followers(id);
+        return userService.getFollowers(id);
+    }
+
+    @GetMapping("/users/tweets")
+    @ResponseBody
+    public List<String> getAllTweets(@RequestParam long id) {
+        return userService.getTweets(id);
     }
 }
